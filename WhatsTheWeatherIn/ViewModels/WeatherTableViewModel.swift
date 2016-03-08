@@ -22,14 +22,7 @@ extension NSDate {
 }
 
 class WeatherTableViewModel {
-		
-	struct Constants {
-		static let baseURL = "http://api.openweathermap.org/data/2.5/forecast?q="
-		static let urlExtension = "&units=metric&type=like&APPID=6a700a1e919dc96b0a98901c9f4bec47"
-		static let baseImageURL = "http://openweathermap.org/img/w/"
-		static let imageExtension = ".png"
-	}
-	
+
 	var disposeBag = DisposeBag()
 
 	//MARK: Model
@@ -114,7 +107,7 @@ class WeatherTableViewModel {
 	var searchText:String? {
 		didSet {
 			if let text = searchText {
-				let urlString = Constants.baseURL + text.stringByReplacingOccurrencesOfString(" ", withString: "%20") + Constants.urlExtension
+				let urlString = Constants.baseURL + text.stringByReplacingOccurrencesOfString(" ", withString: "%20") + Constants.urlParams
 				getWeatherForRequest(urlString)
 			}
 		}
