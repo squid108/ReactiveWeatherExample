@@ -124,7 +124,7 @@ class MVVMWeatherTableViewModel {
 	
 	func getWeatherForRequest(urlString: String) {
         Alamofire.request(Method.GET, urlString).rx_responseJSON()
-		.observeOn(MainScheduler.sharedInstance)
+		.observeOn(MainScheduler.instance)
 		.subscribe(
 			onNext: { json in
 				let jsonForValidation = JSON(json)

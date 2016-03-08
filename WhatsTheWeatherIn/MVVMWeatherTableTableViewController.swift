@@ -68,8 +68,7 @@ class MVVMWeatherTableViewController: UITableViewController, UIAlertViewDelegate
 		super.viewDidLoad()
 		
 		cityTextField.rx_text
-			.debounce(0.3, MainScheduler.sharedInstance)
-			
+			.debounce(0.3, scheduler: MainScheduler.instance)
 			.subscribeNext { searchText in
 				self.viewModel.searchText = searchText
 			}

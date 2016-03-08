@@ -26,7 +26,7 @@ extension Request {
     */
     func rx_response(cancelOnDispose: Bool = false) -> Observable<NSData> {
         
-        return create { observer -> Disposable in
+        return Observable.create { observer -> Disposable in
             
             self.response { request, response, data, error in
                 
@@ -68,7 +68,7 @@ extension Request {
     */
     func rx_responseString(encoding: NSStringEncoding? = nil, cancelOnDispose: Bool = false) -> Observable<String> {
         
-        return create { observer -> Disposable in
+        return Observable.create { observer -> Disposable in
             
             self.responseString(encoding: encoding) { responseData in
                 
@@ -111,7 +111,7 @@ extension Request {
     */
     func rx_responseJSON(options: NSJSONReadingOptions = .AllowFragments, cancelOnDispose: Bool = false) -> Observable<AnyObject> {
         
-        return create { observer in
+        return Observable.create { observer in
             
             self.responseJSON(options: options) { responseData in
                 
@@ -152,7 +152,7 @@ extension Request {
     */
     func rx_responsePropertyList(options: NSPropertyListReadOptions = NSPropertyListReadOptions(), cancelOnDispose: Bool = false) -> Observable<AnyObject> {
         
-        return create { observer in
+        return Observable.create { observer in
             
             self.responsePropertyList(options: options) { responseData in
                 
@@ -202,7 +202,7 @@ extension Request {
     */
     func rx_progress() -> Observable<(Int64, Int64, Int64)> {
         
-        return create { observer in
+        return Observable.create { observer in
             
             self.progress() { bytesWritten, totalBytesWritten, totalBytesExpectedToWrite in
                 

@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		77B3B5CDA6729873AD60200B /* Pods_WhatsTheWeatherIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71A57A7854C045A9C3EDF4F7 /* Pods_WhatsTheWeatherIn.framework */; };
-		9C1D3FB81BD29384007A2865 /* ForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1D3FB71BD29384007A2865 /* ForecastTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		9C1D3FC31BD691D5007A2865 /* MVVMWeatherTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1D3FC11BD691D5007A2865 /* MVVMWeatherTableViewModel.swift */; settings = {ASSET_TAGS = (); }; };
-		9C1D3FC41BD691D5007A2865 /* MVVMWeatherTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1D3FC21BD691D5007A2865 /* MVVMWeatherTableTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		9C4E2B3D1BE10F6D002A0525 /* RxAlamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E2B3C1BE10F6D002A0525 /* RxAlamofire.swift */; settings = {ASSET_TAGS = (); }; };
-		9CA525ED1BCA4D8900029D72 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA525EC1BCA4D8900029D72 /* Weather.swift */; settings = {ASSET_TAGS = (); }; };
+		9C1D3FB81BD29384007A2865 /* ForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1D3FB71BD29384007A2865 /* ForecastTableViewCell.swift */; };
+		9C1D3FC31BD691D5007A2865 /* MVVMWeatherTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1D3FC11BD691D5007A2865 /* MVVMWeatherTableViewModel.swift */; };
+		9C1D3FC41BD691D5007A2865 /* MVVMWeatherTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1D3FC21BD691D5007A2865 /* MVVMWeatherTableTableViewController.swift */; };
+		9C4E2B3D1BE10F6D002A0525 /* RxAlamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C4E2B3C1BE10F6D002A0525 /* RxAlamofire.swift */; };
+		9CA525ED1BCA4D8900029D72 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA525EC1BCA4D8900029D72 /* Weather.swift */; };
 		9CEF80EE1BBFC4EA007ECB47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEF80ED1BBFC4EA007ECB47 /* AppDelegate.swift */; };
 		9CEF80F31BBFC4EA007ECB47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CEF80F11BBFC4EA007ECB47 /* Main.storyboard */; };
 		9CEF80F51BBFC4EA007ECB47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CEF80F41BBFC4EA007ECB47 /* Assets.xcassets */; };
