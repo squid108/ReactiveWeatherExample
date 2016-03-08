@@ -5,10 +5,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Weather Table View Controller-->
+        <!--Weather Table Table View Controller-->
         <scene sceneID="aZn-Cd-hjz">
             <objects>
-                <tableViewController id="mjm-3Q-2bG" customClass="MVVMWeatherTableViewController" customModule="WhatsTheWeatherIn" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="mjm-3Q-2bG" customClass="WeatherTableTableViewController" customModule="WhatsTheWeatherIn" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="62" sectionHeaderHeight="28" sectionFooterHeight="28" id="1XE-bW-1ZK">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,13 +21,13 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="355"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Whats the weather in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lz7-oJ-ApE">
-                                    <rect key="frame" x="219" y="33" width="162" height="21"/>
+                                    <rect key="frame" x="219" y="33" width="162" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New York" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vu2-VC-gLU">
-                                    <rect key="frame" x="219" y="62" width="162" height="30"/>
+                                    <rect key="frame" x="219" y="61" width="162" height="30"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
@@ -37,26 +37,27 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tUe-J2-IJh">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tUe-J2-IJh">
                                     <rect key="frame" x="8" y="192" width="50" height="50"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="50" id="NWe-Ze-S1R"/>
+                                        <constraint firstAttribute="height" constant="50" id="tfX-Z2-AXQ"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJd-Y4-RwS">
-                                    <rect key="frame" x="66" y="275" width="138" height="21"/>
+                                    <rect key="frame" x="66" y="275" width="138" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="⋏" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hw1-8T-tqr">
-                                    <rect key="frame" x="271" y="315" width="15" height="21"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⋏" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hw1-8T-tqr">
+                                    <rect key="frame" x="292.5" y="315" width="15" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kor-UK-Jln">
-                                    <rect key="frame" x="66" y="130" width="130" height="34"/>
+                                    <rect key="frame" x="66" y="130" width="130" height="33.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
@@ -155,11 +156,11 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="backgroundImageOutlet" destination="8c6-sz-ZUX" id="sMs-eW-Ljv"/>
-                        <outlet property="cityDegreesLabel" destination="RkQ-St-2hm" id="9Pi-eu-fc9"/>
-                        <outlet property="cityNameLabel" destination="Kor-UK-Jln" id="IZe-Xe-gTO"/>
+                        <outlet property="backgroundImageOutlet" destination="8c6-sz-ZUX" id="9K9-35-rl4"/>
+                        <outlet property="cityDegreesLabel" destination="RkQ-St-2hm" id="swE-Zr-p0a"/>
+                        <outlet property="cityNameLabel" destination="Kor-UK-Jln" id="BLi-eo-pF6"/>
                         <outlet property="cityTextField" destination="vu2-VC-gLU" id="Es4-06-x1F"/>
-                        <outlet property="weatherImageOutlet" destination="tUe-J2-IJh" id="vxw-M5-D1G"/>
+                        <outlet property="weatherImageOutlet" destination="tUe-J2-IJh" id="33V-dL-ID3"/>
                         <outlet property="weatherMessageLabel" destination="xJd-Y4-RwS" id="Cvb-F4-sgV"/>
                         <outlet property="weatherView" destination="fah-Dg-U5r" id="yV4-xQ-ivm"/>
                     </connections>

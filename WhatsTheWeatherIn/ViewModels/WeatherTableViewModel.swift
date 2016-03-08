@@ -21,7 +21,7 @@ extension NSDate {
 	}
 }
 
-class MVVMWeatherTableViewModel {
+class WeatherTableViewModel {
 		
 	struct Constants {
 		static let baseURL = "http://api.openweathermap.org/data/2.5/forecast?q="
@@ -108,8 +108,6 @@ class MVVMWeatherTableViewModel {
 			tableViewData.on(.Next(Array(zip(days, forecasts))))
 		}
 	}
-	
-	
 	
 	//MARK: Weather fetching
 	

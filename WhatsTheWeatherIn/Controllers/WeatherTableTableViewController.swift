@@ -14,7 +14,7 @@ import Alamofire
 
 
 
-class MVVMWeatherTableViewController: UITableViewController, UIAlertViewDelegate {
+class WeatherTableTableViewController: UITableViewController, UIAlertViewDelegate {
 	
 	var boundToViewModel = false
 	
@@ -62,7 +62,7 @@ class MVVMWeatherTableViewController: UITableViewController, UIAlertViewDelegate
 	
 	//MARK: Lifecycle
 	
-	var viewModel = MVVMWeatherTableViewModel()
+	var viewModel = WeatherTableViewModel()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
