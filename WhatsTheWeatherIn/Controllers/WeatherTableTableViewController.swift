@@ -12,8 +12,6 @@ import RxCocoa
 import RxSwift
 import Alamofire
 
-
-
 class WeatherTableTableViewController: UITableViewController, UIAlertViewDelegate {
 	
 	var boundToViewModel = false
@@ -27,15 +25,12 @@ class WeatherTableTableViewController: UITableViewController, UIAlertViewDelegat
 				}
 				.addDisposableTo(disposeBag)
 	}
-	
-	
-	
+
 	//MARK: Outlets
 	
 	let disposeBag = DisposeBag()
 	
 	@IBOutlet weak var cityTextField: UITextField!
-	
 	@IBOutlet weak var cityNameLabel: UILabel!
 	@IBOutlet weak var cityDegreesLabel: UILabel!
 	@IBOutlet weak var weatherMessageLabel: UILabel!
@@ -57,9 +52,7 @@ class WeatherTableTableViewController: UITableViewController, UIAlertViewDelegat
 			weatherView.bounds.size = UIScreen.mainScreen().bounds.size
 		}
 	}
-	
-	
-	
+
 	//MARK: Lifecycle
 	
 	var viewModel = WeatherTableViewModel()

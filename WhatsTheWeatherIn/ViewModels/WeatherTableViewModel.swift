@@ -26,7 +26,6 @@ class WeatherTableViewModel {
 	var disposeBag = DisposeBag()
 
 	//MARK: Model
-	
 	var weather: Weather? {
 		didSet {
 			if weather?.cityName != nil {
@@ -34,7 +33,6 @@ class WeatherTableViewModel {
 			}
 		}
 	}
-	
 	//MARK: UI
 	
 	var cityName = PublishSubject<String?>()
@@ -103,7 +101,7 @@ class WeatherTableViewModel {
 	}
 	
 	//MARK: Weather fetching
-	
+    
 	var searchText:String? {
 		didSet {
 			if let text = searchText {
@@ -114,27 +112,17 @@ class WeatherTableViewModel {
 	}
 	
 	func getWeatherForRequest(urlString: String) {
-        Alamofire.request(Method.GET, urlString).rx_responseJSON()
-		.observeOn(MainScheduler.instance)
-		.subscribe(
-			onNext: { json in
-				let jsonForValidation = JSON(json)
-				if let error = jsonForValidation["message"].string {
-					print("got error \(error)")
-					self.postError("Error", message: error)
-					return
-				}
-				self.weather = Weather(jsonObject: json)
-
-				},
-			onError: { error in
-				print("Got error")
-				let gotError = error as NSError
-				
-				print(gotError.domain)
-				self.postError("\(gotError.code)", message: gotError.domain)
-			})
-		.addDisposableTo(disposeBag)
+        APIClient.call(Method.GET, urlString: urlString)
+            .observeOn(MainScheduler.instance)
+            .subscribe(
+                onNext: { json in
+                    self.weather = Weather(jsonObject: json)
+                },
+                onError: { error in
+                    let gotError = error as NSError
+                    self.postError("\(gotError.code)", message: gotError.domain)
+            })
+            .addDisposableTo(disposeBag)
 	}
 	
 	func postError(title: String, message: String) {

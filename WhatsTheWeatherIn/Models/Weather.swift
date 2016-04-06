@@ -29,8 +29,9 @@ class Weather {
 	
 	init(jsonObject: AnyObject) {
 		let json = JSON(jsonObject)
-		
+        
 		self.cityName = json["city"]["name"].stringValue
+        
 		if let forecastArray = json["list"].array {
 			for item in forecastArray {
 				let itemForecast = (date: NSDate(timeIntervalSince1970: NSTimeInterval(item["dt"].intValue)),
